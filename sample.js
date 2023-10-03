@@ -5,7 +5,7 @@ const FIGMA_FILE_ID = '0t9SMmG2b9CsmIs32UgCfN';
 
 const getFigmaFile = async () => {
   try {
-    const response = await axios.get(
+    const response = await fetch(
       `https://api.figma.com/v1/files/${FIGMA_FILE_ID}`,
       {
         headers: {
