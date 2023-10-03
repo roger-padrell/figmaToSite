@@ -1,5 +1,3 @@
-const axios = require('axios');
-
 const FIGMA_API_KEY = 'figd_-6qbnuP5kExseVf3evYD9pvlj2rIfc1hTGSrDAiU';
 const FIGMA_FILE_ID = '0t9SMmG2b9CsmIs32UgCfN';
 
