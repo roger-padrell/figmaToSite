@@ -11,7 +11,7 @@ const getFigmaFile = async () => {
         },
       }
     );
-    console.log(response.data.document.children[0].children);
+    console.log(response);
   } catch (error) {
     console.error(error);
   }
