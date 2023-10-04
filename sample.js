@@ -1,7 +1,3 @@
-window.onload = function(){
-	var FIGMA_API_KEY = window.location.href.split("?")[1];
-}
-
 const FIGMA_FILE_ID = '0t9SMmG2b9CsmIs32UgCfN';
 
 var db = {};
@@ -29,7 +25,7 @@ const getFigmaFile = function() {
     fetch(`https://api.figma.com/v1/files/${FIGMA_FILE_ID}`, {
 		method: 'GET',
 		headers: {
-			'X-Figma-Token': FIGMA_API_KEY,
+			'X-Figma-Token': sessionStorage.code,
 		},
 	})
 		.then(response => response.json())
