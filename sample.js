@@ -12,7 +12,7 @@ function startCreation(pg){
 
 function signIn(){
     var st = Math.floor(Math.random() * 100000)
-    window.open("https://www.figma.com/oauth?client_id=IdLyDnXPNECnczbCoMxARm&redirect_uri=https://roger-padrell.github.io/figmaToSite/callback&scope=files:read&state=" + st + "&response_type=code")
+    window.location.href = "https://www.figma.com/oauth?client_id=IdLyDnXPNECnczbCoMxARm&redirect_uri=https://roger-padrell.github.io/figmaToSite/callback&scope=files:read&state=" + st + "&response_type=code";
 }
 
 function loadVars(response){
