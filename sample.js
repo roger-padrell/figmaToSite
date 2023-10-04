@@ -1,6 +1,9 @@
 const FIGMA_API_KEY = 'figd_-6qbnuP5kExseVf3evYD9pvlj2rIfc1hTGSrDAiU';
 const FIGMA_FILE_ID = '0t9SMmG2b9CsmIs32UgCfN';
 
+var db = {};
+db.data = {};
+
 const getFigmaFile = function() {
   try {
     fetch(`https://api.figma.com/v1/files/${FIGMA_FILE_ID}`, {
@@ -10,7 +13,7 @@ const getFigmaFile = function() {
 		},
 	})
 		.then(response => response.json())
-		.then(response => console.log(response))
+		.then(response => db.data = response;)
     
   } catch (error) {
     console.error(error);
