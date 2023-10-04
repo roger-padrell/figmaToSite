@@ -3,7 +3,7 @@
   <script>
     window.onload = function(){
         let els = window.location.href.split("?")[1].split("?")
-        if(els[1].split("=")[1] == sessionStorage.state){
+        if(els[1].split("=")[0] == sessionStorage.state){
           sessionStorage.code = els[0].split("=")[1];
         }
         else{
