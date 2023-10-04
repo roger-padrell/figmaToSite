@@ -13,7 +13,7 @@ const getFigmaFile = function() {
 		},
 	})
 		.then(response => response.json())
-		.then(response => db.data = response;)
+		.then(response => db.data = response)
     
   } catch (error) {
     console.error(error);
