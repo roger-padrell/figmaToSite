@@ -4,6 +4,12 @@ const FIGMA_FILE_ID = '0t9SMmG2b9CsmIs32UgCfN';
 var db = {};
 db.data = {};
 
+function loadVars(response){
+	db.data = response;
+	db.document = response.document;
+	db.pages = response.document.children;
+}
+
 const getFigmaFile = function() {
   try {
     fetch(`https://api.figma.com/v1/files/${FIGMA_FILE_ID}`, {
