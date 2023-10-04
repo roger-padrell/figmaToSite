@@ -1,0 +1,14 @@
+<html>
+  redirecting...
+  <script>
+    windown.onload = function(){
+        let els = window.location.href.split("?")[0].split("?")
+        if(els[1].split("=")[1] == sessionStorage.state){
+          sessionStorage.code = els[0].split("=")[1];
+        }
+        else{
+          alert("Error with Authentication")
+        }
+    }
+  </script>
+</html>
