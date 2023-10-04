@@ -1,4 +1,6 @@
-if(sessionStorage.code){var FIGMA_API_KEY = sessionStorage.code}
+window.onload = function(){
+	var FIGMA_API_KEY = window.location.href.split("?")[1];
+}
 
 const FIGMA_FILE_ID = '0t9SMmG2b9CsmIs32UgCfN';
 
