@@ -2,7 +2,7 @@
   redirecting...
   <script>
     window.onload = function(){
-        let els = window.location.href.split("?")[0].split("?")
+        let els = window.location.href.split("?")[1].split("?")
         if(els[1].split("=")[1] == sessionStorage.state){
           sessionStorage.code = els[0].split("=")[1];
         }
