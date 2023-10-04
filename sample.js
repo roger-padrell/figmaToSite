@@ -1,4 +1,4 @@
-const FIGMA_API_KEY = 'figd_-6qbnuP5kExseVf3evYD9pvlj2rIfc1hTGSrDAiU';
+const FIGMA_API_KEY = 'vehrsN3yZVv8zXt82g8Jm0CiLDlRM8';
 const FIGMA_FILE_ID = '0t9SMmG2b9CsmIs32UgCfN';
 
 var db = {};
