@@ -4,10 +4,16 @@ const FIGMA_FILE_ID = '0t9SMmG2b9CsmIs32UgCfN';
 var db = {};
 db.data = {};
 
+function startCreation(pg){
+	page = db.pages[pg];
+}
+
 function loadVars(response){
 	db.data = response;
 	db.document = response.document;
 	db.pages = response.document.children;
+
+	startCreation(0)
 }
 
 const getFigmaFile = function() {
