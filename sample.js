@@ -8,6 +8,7 @@ window.onload = function(){
 	if(sessionStorage.code){
 		console.log(sessionStorage.code)
 		FIGMA_API_KEY = sessionStorage.code;
+		getFigmaFile()
 	}
 }
 
