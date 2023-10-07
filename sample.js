@@ -1,4 +1,4 @@
-const FIGMA_API_KEY = 'vehrsN3yZVv8zXt82g8Jm0CiLDlRM8';
+var FIGMA_API_KEY = 'vehrsN3yZVv8zXt82g8Jm0CiLDlRM8';
 const FIGMA_FILE_ID = '0t9SMmG2b9CsmIs32UgCfN';
 
 var db = {};
@@ -7,6 +7,7 @@ db.data = {};
 window.onload = function(){
 	if(sessionStorage.code){
 		console.log(sessionStorage.code)
+		FIGMA_API_KEY = code;
 	}
 }
 
