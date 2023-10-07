@@ -7,7 +7,7 @@ db.data = {};
 window.onload = function(){
 	if(sessionStorage.code){
 		console.log(sessionStorage.code)
-		FIGMA_API_KEY = code;
+		FIGMA_API_KEY = sessionStorage.code;
 	}
 }
 
