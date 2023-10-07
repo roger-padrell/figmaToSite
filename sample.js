@@ -4,6 +4,12 @@ const FIGMA_FILE_ID = '0t9SMmG2b9CsmIs32UgCfN';
 var db = {};
 db.data = {};
 
+window.onload = function(){
+	if(sessionStorage.code){
+		console.log(sessionStorage.code)
+	}
+}
+
 function startCreation(pg){
 	page = db.pages[pg];
 }
