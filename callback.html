@@ -1,10 +1,16 @@
 <html>
   redirecting...
   <script>
-    function load(){
-      let els = window.location.href.split("?")[1].split("?")
-        sessionStorage.code = els[0].split("&")[0].split("=")[1];
-        window.location.href = "https://www.figma.com/api/oauth/token?client_id=IdLyDnXPNECnczbCoMxARm&client_secret=vehrsN3yZVv8zXt82g8Jm0CiLDlRM8&redirect_uri=https://roger-padrell.github.io/figmaToSite/callback&code=" + sessionStorage.code;
+    window.onload = function(){
+      const clientId = 'IdLyDnXPNECnczbCoMxARm';
+      const clientSecret = 'vehrsN3yZVv8zXt82g8Jm0CiLDlRM8';
+      const redirectUri = 'https://roger-padrell.github.io/figmaToSite/callback';
+      const authorizationCode = window.location.href.split("?")[1].split("?")[0].split("&")[0].split("=")[1];
+      
+      fetch('https://www.figma.com/api/oauth/token?client_id=' + clientId + '&client_secret=' + clientSecret + '&redirect_uri=' + redirectUri + '&code=' + authorizationCode + '&grant_type=authorization_code', {method: 'POST',})
+      		.then(response => response.json())
+      		.then(response => sessionStorage.code = response; window.location.href = "index")
+      		.catch(err => console.error(err));
     }
   </script>
 </html>
