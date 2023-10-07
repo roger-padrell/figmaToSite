@@ -1,6 +1,10 @@
 <html>
   redirecting...
   <script>
+    function send(r){
+        sessionStorage.code = r;
+        window.location.href = "https://roger-padrell.github.io/figmaToSite/"
+    }
     window.onload = function(){
       const clientId = 'IdLyDnXPNECnczbCoMxARm';
       const clientSecret = 'vehrsN3yZVv8zXt82g8Jm0CiLDlRM8';
@@ -9,7 +13,7 @@
       
       fetch('https://www.figma.com/api/oauth/token?client_id=' + clientId + '&client_secret=' + clientSecret + '&redirect_uri=' + redirectUri + '&code=' + authorizationCode + '&grant_type=authorization_code', {method: 'POST',})
       		.then(response => response.json())
-      		.then(response => sessionStorage.code = response; window.location.href = "index")
+      		.then(response => send(response))
       		.catch(err => console.error(err));
     }
   </script>
