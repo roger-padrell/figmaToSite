@@ -2,7 +2,7 @@
   redirecting...
   <script>
     function send(r){
-        sessionStorage.code = r;
+        sessionStorage.code = JSON.stringify(r);
         window.location.href = "https://roger-padrell.github.io/figmaToSite/"
     }
     window.onload = function(){
