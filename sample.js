@@ -29,17 +29,15 @@ function loadVars(response){
 }
 
 const getFigmaFile = function() {
-  try {
-    fetch("https://api.figma.com/v1/files/" + prompt("Write the file ID:", '0t9SMmG2b9CsmIs32UgCfN'), {
-		method: 'GET',
-		headers: {
-			'X-Figma-Token': FIGMA_API_KEY,
-		},
-	})
-		.then(response => response.json())
-		.then(response => db.data = response)
-    
-  } catch (error) {
-    console.error(error);
+ const FILE_KEY = prompt("Write the file ID:", '0t9SMmG2b9CsmIs32UgCfN');
+const ACCESS_TOKEN = FIGMA_API_KEY;
+
+fetch(`https://api.figma.com/v1/files/${FILE_KEY}`, {
+  headers: {
+    'X-Figma-Token': ACCESS_TOKEN
   }
+})
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.error(error));
 };
