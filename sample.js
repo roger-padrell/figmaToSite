@@ -1,16 +1,16 @@
-var FIGMA_API_KEY = 'vehrsN3yZVv8zXt82g8Jm0CiLDlRM8';
+var FIGMA_API_KEY = 'figd_-6qbnuP5kExseVf3evYD9pvlj2rIfc1hTGSrDAiU';
 var FILE = '0t9SMmG2b9CsmIs32UgCfN';
 
 var db = {};
 db.data = {};
 
-window.onload = function(){
+/*window.onload = function(){
 	if(sessionStorage.code){
 		console.log(sessionStorage.code)
 		FIGMA_API_KEY = JSON.parse(sessionStorage.code).access_token;
 		getFigmaFile()
 	}
-}
+}*/
 
 function startCreation(pg){
 	page = db.pages[pg];
