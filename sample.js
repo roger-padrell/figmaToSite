@@ -4,13 +4,13 @@ var FILE = '0t9SMmG2b9CsmIs32UgCfN';
 var db = {};
 db.data = {};
 
-/*window.onload = function(){
+window.onload = function(){
 	if(sessionStorage.code){
 		console.log(sessionStorage.code)
 		FIGMA_API_KEY = JSON.parse(sessionStorage.code).access_token;
 		getFigmaFile()
 	}
-}*/
+}
 
 function startCreation(pg){
 	page = db.pages[pg];
@@ -31,7 +31,7 @@ function loadVars(response){
 
 var getFigmaFile = function() {
  var FILE_KEY = FILE;
-var ACCESS_TOKEN = FIGMA_API_KEY;
+var ACCESS_TOKEN = "Bearer " + FIGMA_API_KEY;
 
 fetch(`https://api.figma.com/v1/files/${FILE_KEY}`, {
   headers: {
