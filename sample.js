@@ -1,4 +1,5 @@
 var FIGMA_API_KEY = 'vehrsN3yZVv8zXt82g8Jm0CiLDlRM8';
+var FILE = '0t9SMmG2b9CsmIs32UgCfN';
 
 var db = {};
 db.data = {};
@@ -29,7 +30,7 @@ function loadVars(response){
 }
 
 var getFigmaFile = function() {
- var FILE_KEY = prompt("Write the file ID:", '0t9SMmG2b9CsmIs32UgCfN');
+ var FILE_KEY = FILE;
 var ACCESS_TOKEN = FIGMA_API_KEY;
 
 fetch(`https://api.figma.com/v1/files/${FILE_KEY}`, {
