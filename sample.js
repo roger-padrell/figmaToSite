@@ -1,5 +1,5 @@
 var FIGMA_API_KEY = 'vehrsN3yZVv8zXt82g8Jm0CiLDlRM8';
-const FIGMA_FILE_ID = '0t9SMmG2b9CsmIs32UgCfN';
+const FIGMA_FILE_ID = prompt("Write the file ID:", '0t9SMmG2b9CsmIs32UgCfN');
 
 var db = {};
 db.data = {};
