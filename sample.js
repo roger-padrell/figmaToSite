@@ -28,9 +28,9 @@ function loadVars(response){
 	startCreation(0)
 }
 
-const getFigmaFile = function() {
- const FILE_KEY = prompt("Write the file ID:", '0t9SMmG2b9CsmIs32UgCfN');
-const ACCESS_TOKEN = FIGMA_API_KEY;
+var getFigmaFile = function() {
+ var FILE_KEY = prompt("Write the file ID:", '0t9SMmG2b9CsmIs32UgCfN');
+var ACCESS_TOKEN = FIGMA_API_KEY;
 
 fetch(`https://api.figma.com/v1/files/${FILE_KEY}`, {
   headers: {
