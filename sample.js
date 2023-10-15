@@ -31,7 +31,7 @@ function loadVars(response){
 
 var getFigmaFile = function() {
  var FILE_KEY = FILE;
-var ACCESS_TOKEN = "Bearer " + FIGMA_API_KEY;
+var ACCESS_TOKEN = FIGMA_API_KEY;
 
 fetch(`https://api.figma.com/v1/files/${FILE_KEY}`, {
   headers: {
